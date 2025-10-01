@@ -38,6 +38,7 @@ jobs:
           tags: |
             type=raw,value=latest
             type=sha,format=short
+            type=raw,value=${{ github.run_number }}
 
       - name: Construir e Publicar a imagem
         uses: docker/build-push-action@v4
